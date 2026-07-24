@@ -56,13 +56,13 @@ button:hover {
 <body>
 
     <div class="container">
-        <h1>Jogo de Adivinhação</h1>
+        <h1>Jogo de Adivinhação kkk</h1>
 
         <p>Estou pensando em um número entre 1 e 100.</p>
 
         <input type="number" id="guessInput" placeholder="Digite um número">
 
-        <button onclick="guessNumber()">
+        <button id="botaoadivinhar">
             Adivinhar
         </button>
 
@@ -81,7 +81,6 @@ let historico = [];
 let limiteTentativas = 5;
 
 function guessNumber() {
-  alert("entrou");
 
     let chute = Number(document.getElementById("guessInput").value);
 
@@ -134,6 +133,8 @@ function guessNumber() {
     else {
 
         resultado.textContent = "📉 Abaixa esse chute, tá mais perdido que o thaciano em campo";
+
+      document.getElementById("botaoadivinhar").addEventListener("click",guessNumber);
 
     }
 
